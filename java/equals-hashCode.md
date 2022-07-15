@@ -1,3 +1,9 @@
+동일성 비교는 == 비교다. 객체 인스턴스의 주소 값을 비교한다.
+
+primitive data type의 경우 == 를 통해 값 비교가 가능하다.
+
+동등성 비교는 equals() 메소드를 사용해서 객체 내부의 값을 비교한다.
+
 # # equals를 재정의 하는 이유
 두 객체가 논리적으로 같은지 확인해야 할 때 equals를 재정의한다.
 
@@ -38,7 +44,7 @@ public static void main(String[] args) {
 console> true
 ```
 
-## set을 통한 중복 size 검사
+## set을 통한 size 검사
 ```java
 public static void main(String[] args) {
     Set<Car> cars = new HashSet<>();
@@ -52,6 +58,7 @@ public static void main(String[] args) {
 console> 2
 ```
 * hashCode를 equals와 함께 재정의하지 않으면 위처럼 예상치 못한 결과를 얻을 수 있다.
+* hashcode를 재정의 하지 않으면 같은 값 객체라도 해시값이 다를 수 있다. 따라서 HashTable에서 해당 객체가 저장된 버킷을 찾을 수 없다.
 
 Car 클래스는 해당 클래스에서 hashCode를 재정의하지 않아 Object의 hashCode 메서드를 사용한다. Object 클래스의 hashCode 메서드는 객체의 고유한 주소 값을 int 값으로 변환하기 때문에 객체마다 다른 값을 리턴한다.
 
@@ -80,3 +87,8 @@ public class Car {
     }
 }
 ```
+
+위처럼 hashCode 재정의를 통해 객체의 동등성을 설정해줄 수 있다.
+
+
+
