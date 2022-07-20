@@ -88,4 +88,4 @@ public class Car {
 # 결론 
 HashTable, HashMap 요놈들은 Key의 hashcode를 통해 value값을 쉽게 찾아낼 수 있다. equals() 메서드는 해시 충돌이 일어났을 때 버킷 리스트 내부에서 사용되고, hashCode()가 버킷 인덱스를 결정하게 된다. 따라서 해시 관련 자료구조를 사용하려면 클래스에서 equals() 메서드와 hashCode() 메서드를 둘 다 정의해야 한다.
 
-
+https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=travelmaps&logNo=220931531769&redirect=Dlog&widgetTypeCall=true
